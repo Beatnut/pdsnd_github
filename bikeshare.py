@@ -1,3 +1,5 @@
+"""Refactoring"""
+
 import time
 import pandas as pd
 import numpy as np
@@ -56,7 +58,7 @@ def get_filters():
           else:
             break
 
-    print('-'*40)
+    print('.'*40)
     return city, month, day
 
 
@@ -216,7 +218,7 @@ def raw_data(df):
             row2 += 5
 
         raw_data = input("\n Wanna see 5 more lines? Type 'yes' or 'no'\n").lower()
-  
+
 def main():
     while True:
         city, month, day = get_filters()
