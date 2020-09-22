@@ -1,8 +1,14 @@
+<<<<<<< HEAD
     """
     Bikeshare*ing great thing to do
     """
 
 
+||||||| a30e513
+=======
+"""Refactoring"""
+
+>>>>>>> refactoring
 import time
 import pandas as pd
 import numpy as np
@@ -61,7 +67,13 @@ def get_filters():
           else:
             break
 
+<<<<<<< HEAD
     print('-'*40)
+||||||| a30e513
+    print('-'*40) 
+=======
+    print('.'*40)
+>>>>>>> refactoring
     return city, month, day
 
 
@@ -101,9 +113,17 @@ def load_data(city, month, day):
     if day != 'all':
  # filter by day of wekk to create new df
         df = df[df['day_of_week'] == day.title()]
+<<<<<<< HEAD
 
 
 
+||||||| a30e513
+                                            
+                                               
+                                               
+=======
+
+>>>>>>> refactoring
 
     return df
 
@@ -121,7 +141,6 @@ def time_stats(df):
     popular_day = df['day_of_week'].mode()[0]
     print('Most popular day:', popular_day)
     # TO DO: display the most common start hour
-    #most pop hour
     popular_hour = df['hour'].mode()[0]
     print('Most popular Start Hour:', popular_hour)
 
@@ -150,7 +169,7 @@ def station_stats(df):
     print('Most popular Start:', popular_start)
     print('Most popular End:', popular_end)
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-.-'*40)
 
 
 def trip_duration_stats(df):
@@ -209,8 +228,6 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    #new
-    #------------------------------------------------------------------
 def raw_data(df):
     """Displays raw data of bikeshare ."""
 
@@ -224,10 +241,21 @@ def raw_data(df):
             print(df.iloc[row1: row2])
             row1 += 5
             row2 += 5
+<<<<<<< HEAD
 
         raw_data = input("\n Wanna see 5 more lines? Type 'yes' or 'no'\n").lower()
 
     #------------------------------------------------------------------
+||||||| a30e513
+  
+        raw_data = input("\n Wanna see 5 more lines? Type 'yes' or 'no'\n").lower()    
+  
+    #------------------------------------------------------------------
+=======
+
+        raw_data = input("\n Wanna see 5 more lines? Type 'yes' or 'no'\n").lower()
+
+>>>>>>> refactoring
 def main():
     while True:
         city, month, day = get_filters()
